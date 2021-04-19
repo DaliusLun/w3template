@@ -68,3 +68,47 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: 400;
 }
+
+.wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .nav {
+  height: 40px;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+}
+
+.wrapper .header {
+  background: url(../img/sailboat.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.wrapper .header .header__title {
+  background-color: black;
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  margin-top: calc(100vh - 60px);
+  margin-left: 20px;
+  color: white;
+  font-size: 25px;
+  padding: 10px 10px 10px 10px;
+}
+
+.wrapper .header .header__title:hover {
+  background-color: green;
+}
+
+.wrapper .main {
+  border: red 1px;
+  height: 1000px;
+}
+
+.wrapper .footer {
+  background-color: black;
+  height: 250px;
+}
