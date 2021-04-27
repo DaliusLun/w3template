@@ -8,19 +8,33 @@ font-family: $fontFam;
         background-color: black;
         display: flex;
         
-
+              
+        @media (max-width: $sc) {   
+            display: inline-block;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;  
+            height: 100vh;
+            transform: translateY(-100%);
+            position: absolute;
+            
+            }
         
-          
+
+
         .nav__menu {
             color: white;
             font-size: $fontSize;
-            justify-content: center;
-            align-items: center;
             height: 100%;
             padding: 10px 10px 10px 10px;
             text-align: center;
-            overflow: hidden;
-            
+            @media (max-width: $sc) {   
+                display: block;
+                width: 100%;
+                height: auto;
+                }
+
                 &:hover {
                     background-color: white;
                     color: black;
@@ -37,8 +51,6 @@ font-family: $fontFam;
         }
         
         .search {
-            
-            float: right!important;
             display: block;
             position: absolute;
             margin-left: calc(100% - 50px);
@@ -47,14 +59,29 @@ font-family: $fontFam;
                 background-color: green;
                 color: black;
             }
-
-            .search__button {
-                float: right;
-                                                
-            }
         }
+
+
     }
 
+    .on {
+        transform: translateY(0%);
+        position: relative;  
+    }
+    .burger {
+        position: relative;
+        background-color: black;
+        text-align: right;
+        font-size: 40px;
+        height: 0px;
+        color: white;
+        display: block;
+        padding-right: 10px;
+        @media (max-width: $sc) {   
+            
+            height: 40px;
+            }
+    }
     .header {
         background: url(../img/sailboat.jpg) no-repeat center center;
         -webkit-background-size: cover;
@@ -65,7 +92,8 @@ font-family: $fontFam;
         max-height: 600px;
         position: relative;
         min-height: 400px;
-        overflow: hidden;
+        display: block;
+        
 
         
 
@@ -150,3 +178,9 @@ font-family: $fontFam;
 .padding {
     margin: 10px 10px 10px 10px;
 }
+
+// .on {
+//     transform: translateY(100%);
+//     position: absolute;
+//     background-color: red;
+// }

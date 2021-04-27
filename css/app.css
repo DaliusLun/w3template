@@ -82,15 +82,33 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
 }
 
+@media (max-width: 700px) {
+  .wrapper .nav {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    transform: translateY(-100%);
+    position: absolute;
+  }
+}
+
 .wrapper .nav .nav__menu {
   color: white;
   font-size: 20px;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   padding: 10px 10px 10px 10px;
   text-align: center;
-  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .wrapper .nav .nav__menu {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .wrapper .nav .nav__menu:hover {
@@ -109,7 +127,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper .nav .search {
-  float: right !important;
   display: block;
   position: absolute;
   margin-left: calc(100% - 50px);
@@ -120,8 +137,26 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
 }
 
-.wrapper .nav .search .search__button {
-  float: right;
+.wrapper .on {
+  transform: translateY(0%);
+  position: relative;
+}
+
+.wrapper .burger {
+  position: relative;
+  background-color: black;
+  text-align: right;
+  font-size: 40px;
+  height: 0px;
+  color: white;
+  display: block;
+  padding-right: 10px;
+}
+
+@media (max-width: 700px) {
+  .wrapper .burger {
+    height: 40px;
+  }
 }
 
 .wrapper .header {
@@ -131,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 600px;
   position: relative;
   min-height: 400px;
-  overflow: hidden;
+  display: block;
 }
 
 .wrapper .header .header__title {
