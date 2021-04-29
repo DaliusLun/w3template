@@ -205,7 +205,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper .main .main__1block {
   border: 1px black;
-  width: 100%;
   padding-top: 30px;
   margin: 10px 10px 10px 10px;
   text-align: center;
@@ -319,6 +318,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 30px;
 }
 
+@media (max-width: 700px) {
+  .wrapper .main .main__2block .block2__container .column1 {
+    margin: 10px 10px 10px 25px;
+    width: 90%;
+  }
+}
+
 .wrapper .main .main__2block .block2__container .column2 {
   width: 23%;
   background-color: white;
@@ -333,16 +339,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper .main__3block {
-  width: 100%;
   padding-top: 30px;
   margin: 10px 10px 10px 10px;
   text-align: center;
-}
-
-@media (max-width: 700px) {
-  .wrapper .main__3block {
-    display: inline-block;
-  }
 }
 
 .wrapper .main__3block .block3__title {
@@ -353,6 +352,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 10px 10px 10px 10px;
 }
 
 @media (max-width: 700px) {
@@ -370,21 +370,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 700px) {
   .wrapper .main__3block .block3__table .block3__column {
+    width: 100%;
     display: inline-block;
-    margin-left: 0px;
-    margin-right: 0px;
   }
 }
 
 .wrapper .main__3block .block3__table .block3__column:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-@media (max-width: 700px) {
-  .wrapper .main__3block .block3__table .block3__column {
-    width: 90%;
-    min-width: 70vh;
-  }
 }
 
 .wrapper .main__3block .block3__table .block3__column .block3__line1 {
@@ -394,6 +386,7 @@ h1, h2, h3, h4, h5, h6 {
   border: #e2e2e2 0.5px solid;
   font-size: 30px;
   padding-top: 20px;
+  width: 100%;
 }
 
 .wrapper .main__3block .block3__table .block3__column .gray {
@@ -468,6 +461,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 700px) {
   .wrapper .main__4block .block4__wrap {
     display: inline-block;
+    width: 95%;
   }
 }
 
@@ -604,11 +598,126 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
+.wrapper .main__5block {
+  background: url(../img/map.jpg) no-repeat center center;
+  background-size: cover;
+  height: 50vw;
+  max-height: 570px;
+  position: relative;
+  min-height: 400px;
+  display: block;
+}
+
 .wrapper .footer {
   background-color: black;
   height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .footer .footer__wrap {
+  width: 95%;
+}
+
+.wrapper .footer .footer__wrap .footer__title {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.wrapper .footer .footer__wrap .footer__social {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.wrapper .footer .footer__wrap .footer__social .social {
+  background-color: green;
+  padding-top: 10px;
+  width: 40px;
+  height: 40px;
+  margin-top: 0px;
+  color: white;
+}
+
+.wrapper .footer .footer__wrap .footer__social .social:hover {
+  background-color: #686666;
+  color: black;
+}
+
+.wrapper .footer .footer__wrap .footer__social .social__margin {
+  margin-right: 30px;
+}
+
+.wrapper .footer .footer__wrap .toTopButton {
+  float: right;
+  margin-top: 12px;
+  background-color: green;
+  width: 150px;
+  height: 40px;
+  padding-top: 12px;
+  margin-right: 5px;
+  text-align: center;
+  color: white;
+  margin-top: -40px;
+}
+
+.wrapper .footer .footer__wrap .noToTopButton {
+  display: none;
+}
+
+.wrapper .footer .footer__wrap .totop__box {
+  width: 60px;
+  height: 60px;
+  padding-top: 0px;
+  padding-left: 50x;
+  float: right;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: -50px;
+}
+
+.wrapper .footer .footer__wrap .totop__box:hover {
+  background-color: #686666;
+  color: black;
+}
+
+.wrapper .footer .footer__wrap .totop__box .toTop {
+  background-color: white;
+  color: black;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  border-radius: 50px;
+  /* Rounded corners */
+  font-size: 20px;
+  /* Increase font size */
+  height: 30px;
+  width: 30px;
+  float: center;
+  padding-top: 5px;
+  margin-top: 15px;
+  overflow: hidden;
+  padding-left: 6px;
+  margin-left: 14px;
+}
+
+.wrapper .footer .footer__wrap .footer__bottom {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  margin-top: 10px;
 }
 
 .padding {
   margin: 10px 10px 10px 10px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
