@@ -46,16 +46,18 @@ document.getElementById('totop').addEventListener('click', function() {
 // totop button popout beggining
 
 
-document.querySelector(".totop__box").addEventListener("mouseover", mouseOver);
-document.querySelector(".totop__box").addEventListener("mouseout", mouseOut);
+let box = document.querySelector(".totop__box");
+let button = document.querySelector(".toTopButton");
 
-function mouseOver() {
-  document.querySelector(".toTopButton").classList.remove('noToTopButton');
-}
 
-function mouseOut() {
-  document.querySelector(".toTopButton").classList.add('noToTopButton');
-}
+box.addEventListener('mouseover', () => {
+  button.classList.remove('noToTopButton');
+});
+
+box.addEventListener('mouseleave', () => {
+  button.classList.add('noToTopButton');
+});
+
 
 // totop button popout end
 //----------------------------------------------
@@ -91,18 +93,21 @@ closeButton.addEventListener('click', () => {
 //----------------------------------------------
 // dropdown beggining
 
-document.querySelector(".drop").addEventListener("mouseover", mouseOver);
-document.querySelector(".drop").addEventListener("mouseout", mouseOut);
+let drop = document.querySelector(".drop");
+let dropdown = document.querySelector(".dropdown");
 
-function mouseOver() {
-  document.querySelector(".dropdown").classList.add('on');
 
-}
+drop.addEventListener('mouseover', () => {
+  dropdown.classList.add('on');
+});
 
-function mouseOut() {
-  document.querySelector(".dropdown").classList.remove('on');
+drop.addEventListener('mouseleave', () => {
+  dropdown.classList.remove('on');
+});
 
-}
 
 // dropdown end
 //----------------------------------------------
+
+
+
