@@ -269,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   margin: 10px 10px 10px 10px;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 80px;
 }
 
 @media (max-width: 700px) {
@@ -336,6 +336,27 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 20px;
     width: 90%;
   }
+}
+
+.wrapper .main .main__plusbox {
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 25px;
+  float: right;
+  margin-right: 20px;
+  margin-top: -34px;
+  color: white;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.wrapper .main .main__plusbox:hover {
+  background-color: #e2e2e2;
+  color: black;
 }
 
 .wrapper .main__3block {
@@ -712,6 +733,61 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   font-size: 15px;
   margin-top: 10px;
+}
+
+.wrapper .side__menu {
+  width: 300px;
+  height: 100vh;
+  background-color: white;
+  color: red;
+  display: inline-block;
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  opacity: 0.9;
+  transition: 1s;
+}
+
+.wrapper .side__menu .menu {
+  color: black;
+  font-size: 40px;
+}
+
+.wrapper .side__menu .menu .menu__line {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  color: black;
+}
+
+.wrapper .side__menu .menu .menu__line:hover {
+  color: blue;
+  background-color: #e2e2e2;
+  cursor: pointer;
+}
+
+.wrapper .side__menu .menu .menu__line a {
+  color: black;
+}
+
+.wrapper .side__menu .menu .close {
+  color: green;
+  margin-bottom: 30px;
+}
+
+.wrapper .side__menu .menu .close:hover {
+  color: black;
+  background-color: #e2e2e2;
+  cursor: pointer;
+}
+
+.wrapper .side__menuON {
+  transform: translateX(0%);
 }
 
 .padding {

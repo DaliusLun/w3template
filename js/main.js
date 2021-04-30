@@ -45,7 +45,6 @@ document.getElementById('totop').addEventListener('click', function() {
 //----------------------------------------------
 // totop button popout beggining
 
-// let box = document.querySelector('.totop__box');
 
 document.querySelector(".totop__box").addEventListener("mouseover", mouseOver);
 document.querySelector(".totop__box").addEventListener("mouseout", mouseOut);
@@ -58,52 +57,30 @@ function mouseOut() {
   document.querySelector(".toTopButton").classList.add('noToTopButton');
 }
 
-
-
-
-
-
-// let box = document.querySelector('.totop__box');
-// let button = document.querySelector('.toTopButton');
-
-// box.addEventListener('mouseover', () => {
- 
-//     if (button.className == 'toTopButton noToTopButton') {
-//         button.classList.remove('noToTopButton');
-//         console.log("tes");
-        
-//     } else {
-//         button.classList.add('noToTopButton');
-//         console.log("no");
-
-//     }
-// });
-
-
 // totop button popout end
 //----------------------------------------------
 
-// let button = document.querySelector('.toTopButton');
-
-// window.onload = initDivMouseOver;
-// function initDivMouseOver()   {
-//    let div = document.querySelector('.totop__box');
-//    div.mouseIsOver = false;
-//    div.onmouseover = function()   {
-//       this.mouseIsOver = true;
-//    };
-//    div.onmouseout = function()   {
-//       this.mouseIsOver = false;
-//    }
-//    div.onmouseover = function()   {
-//       if (this.mouseIsOver)   {
-//           button.classList.add('noToTopButton');
-//           console.log("no");
-//       } else {
-//           button.classList.remove('noToTopButton');
-//           console.log("yes");
-//       }
-//    }
-// }
 
 
+//----------------------------------------------
+// sidemenu beggining
+
+let menu = document.querySelector('.side__menu');
+let plus = document.querySelector('.main__plusbox');
+let closeButton = document.querySelector('.close');
+
+
+plus.addEventListener('click', () => {
+ 
+  menu.classList.add('side__menuON');
+
+});
+
+closeButton.addEventListener('click', () => {
+ 
+  menu.classList.remove('side__menuON');
+
+});
+
+// sidemenu end
+//----------------------------------------------

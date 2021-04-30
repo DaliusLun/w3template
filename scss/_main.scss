@@ -198,7 +198,7 @@ font-family: $fontFam;
                 display: flex;
                 margin: 10px 10px 10px 10px;
                 padding-top: 30px;
-                padding-bottom: 30px;
+                padding-bottom: 80px;
                 @media (max-width: $sc) {   
                     display: inline-block;
                 }
@@ -256,6 +256,26 @@ font-family: $fontFam;
             }
         }
 
+        .main__plusbox {
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border-radius: 25px;
+            float: right;
+            margin-right: 20px;
+            margin-top: -34px;
+            color: white;
+            font-size: 27px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(226, 226, 226);
+                color: black;
+            }
+
+        }
     }
 
 
@@ -618,11 +638,68 @@ font-family: $fontFam;
             }
         }
     }
+
+
+    .side__menu {
+        width: 300px;
+        height: 100vh;
+        background-color: white;
+        color: red;
+        display: inline-block;
+        z-index: 200;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        opacity: 0.9;
+        transition: 1s;
+
+        .menu {
+            color: black;
+            font-size: 40px;
+            
+            .menu__line {
+                width: 100%;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 10px;
+                color: black;
+                &:hover{
+                    color: blue;
+                    background-color: rgb(226, 226, 226);
+                    cursor: pointer;
+                }
+
+                a{
+                    color: black;
+                }
+            }
+
+            .close {
+                color: green;
+                margin-bottom: 30px;
+                &:hover{
+                    color: black;
+                    background-color: rgb(226, 226, 226);
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+    .side__menuON {
+        transform: translateX(0%);
+    }
 }
 
 .padding {
     margin: 10px 10px 10px 10px;
 }
+
+
 
 
 html {
