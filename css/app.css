@@ -118,6 +118,49 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
+.wrapper .nav .nav__menu .dropdown {
+  background-color: #e2e2e2;
+  color: black;
+  width: 150px;
+  display: none;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wrapper .nav .nav__menu .dropdown .meniu__line {
+  text-align: left;
+  height: 30px;
+  list-style-type: none;
+  padding: 10px 10px 10px 10px;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 700px) {
+  .wrapper .nav .nav__menu .dropdown .meniu__line {
+    text-align: center;
+  }
+}
+
+.wrapper .nav .nav__menu .dropdown .meniu__line a {
+  color: black;
+}
+
+.wrapper .nav .nav__menu .dropdown .meniu__line:hover {
+  background-color: gray;
+  color: black;
+  cursor: pointer;
+}
+
+.wrapper .nav .nav__menu .on {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .wrapper .nav .nav__menu .on {
+    width: 100%;
+  }
+}
+
 .wrapper .nav .green {
   background-color: green;
 }

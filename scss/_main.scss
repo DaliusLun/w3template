@@ -39,7 +39,51 @@ font-family: $fontFam;
                     color: black;
                     cursor: pointer;
                 }
+
+                .dropdown {
+                    background-color: rgb(226, 226, 226);
+                    color: black;
+                    width: 150px;
+                    display: none;
+                    margin-top: 10px;
+                    padding-bottom: 10px;
+
+
+                    .meniu__line {
+                        text-align: left;
+                        height:30px;
+                        list-style-type: none;
+                        padding: 10px 10px 10px 10px;
+                        padding-bottom: 30px;
+                        
+                        @media (max-width: $sc) {   
+                            text-align: center;
+                        }
+
+                            a {
+                                color: black;
+                                
+                            }
+                            &:hover {
+                                background-color: gray;
+                                color: black;
+                                cursor: pointer;
+                            }
+                    }
+                }
+
+                .on {
+                    display: block;
+
+                    @media (max-width: $sc) {   
+                        width: 100%;
+                        
+                    }
+                    
+                }
         }
+
+
 
         .green {
             background-color: green;

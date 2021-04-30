@@ -84,3 +84,25 @@ closeButton.addEventListener('click', () => {
 
 // sidemenu end
 //----------------------------------------------
+
+
+
+
+//----------------------------------------------
+// dropdown beggining
+
+document.querySelector(".drop").addEventListener("mouseover", mouseOver);
+document.querySelector(".drop").addEventListener("mouseout", mouseOut);
+
+function mouseOver() {
+  document.querySelector(".dropdown").classList.add('on');
+
+}
+
+function mouseOut() {
+  document.querySelector(".dropdown").classList.remove('on');
+
+}
+
+// dropdown end
+//----------------------------------------------
